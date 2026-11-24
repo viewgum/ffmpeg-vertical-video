@@ -377,5 +377,5 @@ for (const recipe of recipes) {
 if (!process.env.KEEP) rmSync(root, { recursive: true, force: true });
 else console.log(`kept ${root}`);
 const skip = skipped ? `, ${skipped} check${skipped === 1 ? "" : "s"} skipped` : "";
-console.log(failed ? `${failed} failed of ${ran}${skip}` : `ok: ${ran} snippets ran and passed their checks${skip} (${version})`);
+console.log(failed ? `${failed} failed of ${ran}${skip}` : `ok: ${ran} snippet${ran === 1 ? "" : "s"} ran and passed ${ran === 1 ? "its check" : "their checks"}${skip} (${version})`);
 process.exit(failed ? 1 : 0);
