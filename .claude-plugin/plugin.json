@@ -1,0 +1,15 @@
+{
+  "name": "ffmpeg-vertical-video",
+  "description": "Tested FFmpeg commands for vertical short video for TikTok, Reels and Shorts: 16:9 to 9:16, export settings built to the apps' published upload specs, captions inside the safe zone, compression to a size, loudness, music and more.",
+  "version": "1.0.0",
+  "author": {
+    "name": "ViewGum",
+    "email": "support@viewgum.com",
+    "url": "https://viewgum.com"
+  },
+  "homepage": "https://github.com/viewgum/ffmpeg-vertical-video",
+  "repository": "https://github.com/viewgum/ffmpeg-vertical-video",
+  "license": "MIT",
+  "keywords": ["ffmpeg", "vertical-video", "tiktok", "instagram-reels", "youtube-shorts", "captions"],
+  "icon": "./assets/icon.png"
+}

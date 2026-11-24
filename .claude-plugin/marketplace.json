@@ -1,0 +1,18 @@
+{
+  "name": "viewgum-ffmpeg",
+  "owner": {
+    "name": "ViewGum",
+    "email": "support@viewgum.com",
+    "url": "https://viewgum.com"
+  },
+  "description": "Tested FFmpeg commands for vertical short video, as an agent skill.",
+  "plugins": [
+    {
+      "name": "ffmpeg-vertical-video",
+      "source": "./",
+      "description": "Tested FFmpeg commands for 9:16 video for TikTok, Reels and Shorts, with what each part does.",
+      "homepage": "https://github.com/viewgum/ffmpeg-vertical-video",
+      "license": "MIT"
+    }
+  ]
+}

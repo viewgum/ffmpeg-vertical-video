@@ -1,0 +1,19 @@
+{
+  "name": "ffmpeg-vertical-video",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Tested FFmpeg commands for vertical video for TikTok, Instagram Reels, YouTube Shorts and Facebook Reels: 16:9 to 9:16, export settings, captions in the safe zone, compression, loudness and more.",
+  "license": "MIT",
+  "author": "ViewGum (https://viewgum.com)",
+  "homepage": "https://github.com/viewgum/ffmpeg-vertical-video#readme",
+  "bugs": "https://github.com/viewgum/ffmpeg-vertical-video/issues",
+  "repository": { "type": "git", "url": "git+https://github.com/viewgum/ffmpeg-vertical-video.git" },
+  "keywords": ["ffmpeg", "vertical-video", "9x16", "tiktok", "instagram-reels", "youtube-shorts", "facebook-reels", "subtitles", "loudnorm", "agent-skills"],
+  "scripts": {
+    "test": "node test.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check"
+  },
+  "engines": { "node": ">=18" }
+}

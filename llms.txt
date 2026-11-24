@@ -1,0 +1,32 @@
+# ffmpeg-vertical-video
+
+> Tested FFmpeg commands for vertical (9:16) short video for TikTok, YouTube Shorts, Instagram Reels and Facebook Reels: 30
+> commands in 15 recipes, each run in CI on generated clips and checked with ffprobe and the decoded pixels. Also an agent skill. MIT.
+
+Short answers:
+- 16:9 to 9:16 by cropping the middle: ffmpeg -i input.mp4 -vf "crop=ih*9/16:ih,scale=1080:1920,setsar=1" -c:v libx264 -crf 20 -preset medium -pix_fmt yuv420p -c:a copy vertical.mp4
+- One file built to all four apps' upload specs: H.264 High profile, yuv420p, progressive, 30 fps, a 2 s closed GOP, a capped bitrate, AAC 48 kHz stereo, -movflags +faststart, -use_editlist 0 (see Export settings). It keeps the source's length.
+
+## Recipes
+
+- [Convert a 16:9 video to 9:16 with FFmpeg](https://github.com/viewgum/ffmpeg-vertical-video/blob/main/recipes/16x9-to-9x16.md): turn a horizontal video into a vertical one
+- [FFmpeg export settings for TikTok, Instagram Reels, YouTube Shorts and Facebook Reels](https://github.com/viewgum/ffmpeg-vertical-video/blob/main/recipes/export-settings.md): export one file for every app
+- [Compress a video to a target file size with FFmpeg](https://github.com/viewgum/ffmpeg-vertical-video/blob/main/recipes/compress-to-size.md): compress to a file size
+- [Trim or cut a video with FFmpeg](https://github.com/viewgum/ffmpeg-vertical-video/blob/main/recipes/trim.md): cut a clip or trim to a length
+- [Speed up or slow down a video with FFmpeg](https://github.com/viewgum/ffmpeg-vertical-video/blob/main/recipes/speed.md): change the speed
+- [Loop a video to a set length with FFmpeg](https://github.com/viewgum/ffmpeg-vertical-video/blob/main/recipes/loop.md): loop a clip
+- [Burn captions and text into a vertical video with FFmpeg](https://github.com/viewgum/ffmpeg-vertical-video/blob/main/recipes/captions.md): burn captions or a title into the picture
+- [Normalize audio loudness to a LUFS target with FFmpeg](https://github.com/viewgum/ffmpeg-vertical-video/blob/main/recipes/loudness.md): set the loudness (lufs)
+- [Add background music to a video with FFmpeg](https://github.com/viewgum/ffmpeg-vertical-video/blob/main/recipes/music.md): add music under a voice, or remove the sound
+- [Extract a cover frame or thumbnail from a video with FFmpeg](https://github.com/viewgum/ffmpeg-vertical-video/blob/main/recipes/cover-frame.md): save a frame as a cover image
+- [Make a video from an image and audio with FFmpeg](https://github.com/viewgum/ffmpeg-vertical-video/blob/main/recipes/still-image-video.md): turn a picture and a sound into a video
+- [Stack two videos into a vertical split screen with FFmpeg](https://github.com/viewgum/ffmpeg-vertical-video/blob/main/recipes/split-screen.md): stack two videos, top and bottom
+- [Rotate a sideways video with FFmpeg](https://github.com/viewgum/ffmpeg-vertical-video/blob/main/recipes/rotate.md): rotate a sideways video
+- [Join video clips into one with FFmpeg](https://github.com/viewgum/ffmpeg-vertical-video/blob/main/recipes/join-clips.md): join clips end to end
+- [Convert an HDR iPhone video to SDR with FFmpeg](https://github.com/viewgum/ffmpeg-vertical-video/blob/main/recipes/hdr-to-sdr.md): convert hdr to sdr
+
+## Related
+
+- [Agent skill](https://github.com/viewgum/ffmpeg-vertical-video/blob/main/skills/ffmpeg-vertical-video/SKILL.md): npx skills add viewgum/ffmpeg-vertical-video
+- [short-form-video-specs](https://github.com/viewgum/short-form-video-specs): the safe zones and limits these commands use
+- [Free browser tools](https://viewgum.com/tools): the same jobs without installing FFmpeg
